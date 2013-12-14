@@ -1,0 +1,172 @@
+<% layout('../layouts/default') -%>
+<div class="row">
+  <div class="col-md-8">
+    <div class="row">
+      <h3>A view of Cloud Computing</h3>
+      <div class="col-md-2">
+        <img src="/img/paper.jpg" alt="160x160" class="img-thumbnail"> 
+      </div>
+      
+      <div class="paper-meta col-md-6">
+        <dl>
+          <dt>Authors:</dt>
+          <dd>Michael Armbrust</dd>
+          <dd>Armando Fox</dd>
+          <dd>Rean Griffith</dd>
+          <dd>Anthony D. Joseph</dd>
+          <dt>Attachments</dt>
+          <dd>
+            <a href="#"><img src="/img/pdf.png" alt="pdf"></a>
+            <a href="#"><img src="/img/word.png" alt="word"></a>
+            <a href="#"><img src="/img/ppt.png" alt="ppt"></a>
+            <a href="#"><img src="/img/rar.png" alt="rar"></a>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="star-rating col-md-4">
+        <h5>Rating</h5>
+        <i class='glyphicon glyphicon-star'></i>
+        <i class='glyphicon glyphicon-star'></i>
+        <i class='glyphicon glyphicon-star'></i>
+        <i class='glyphicon glyphicon-star-empty'></i>
+        <i class='glyphicon glyphicon-star-empty'></i>
+        4.8
+        <br><br><br>
+        <h5>Make your rating</h5>
+        <input type="number" data-max="4" data-min="0" name="your_awesome_parameter" id="some_id" class="rating" />
+      </div>
+    </div>
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#Abstract" data-toggle="tab">Abstract</a></li>
+      <li><a href="#References" data-toggle="tab">References</a></li>
+      <li><a href="#Cited" data-toggle="tab">Cited By</a></li>
+      <li><a href="#Publication" data-toggle="tab">Publication</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane fade in active well" id="Abstract">
+        <p>
+          With the rise of cloud-computing and cloud-scale data management the importance of shipping the code of an application to its data has increased tremendously. Especially when offering data analytics on top of traditional relational databases as a service in the cloud, new data-centric programming paradigms become necessary. Traditionally, relational databases offer two approaches to ship code close to the data: declarative SQL statements and imperative stored procedures. While SQL statements can be efficiently optimized and parallelized, stored procedures allow more complex logic that can be efficiently decomposed.
+          <br><br>
+          In this paper, we propose a novel functional language which extends SQL called FunSQL. FunSQL combines the best of both worlds: (1) it allows applications developers to implement more complex application logic as in SQL only, (2) the application logic can be decomposed efficiently and (3) it can be efficiently optimized and parallelized.
+        </p>
+      </div>
+      <div class="tab-pane fade well" id="References">
+        <p>
+          1. Amazon.com CEO Jeff Bezos on Animoto (Apr. 2008); http://blog.animoto.com/2008/04/21/amazon-ceo-jeff-bezos-on-animoto/.<br><br>
+          2. Amazon S3 Team. Amazon S3 Availability Event (July 20, 2008); http://status.aws.amazon.com/s3-20080720.html.<br><br>
+          3. Amazon Web Services. TC3 Health Case Study; http://aws.amazon.com/solutions/case-studies/tc3-health/.<br>
+          4. Armbrust, M., et al. Above the clouds: A Berkeley view of cloud computing. Tech. Rep. UCB/EECS-2009-28, EECS Department, U.C. Berkeley, Feb 2009.<br><br>
+          5. Luiz André Barroso , Urs Hölzle, The Case for Energy-Proportional Computing, Computer, v.40 n.12, p.33-37, December 2007  [doi>10.1109/MC.2007.443]<br><br>
+          6. Brodkin, J. Loss of customer data spurs closure of online storage service 'The Linkup.' Network World (Aug. 2008).<br><br>
+          7. Fink, J. FBI agents raid Dallas computer business (Apr. 2009); http://cbs11tv.com/local/Core.IP.Networks.2.974706.html.<br><br>
+          8. Freedom OSS. Large data set transfer to the cloud (Apr. 2009); http://freedomoss.com/clouddataingestion.<br><br>
+          9. Garfinkel, S. An Evaluation of Amazon's Grid Computing Services: EC2, S3 and SQS. Tech. Rep. TR-08-07, Harvard University, Aug. 2007.<br><br>
+          10. A Conversation with Jim Gray, Queue, v.1 n.4, June 2003  [doi>10.1145/864056.864078]<br><br>
+        </p>
+      </div>
+      <div class="tab-pane fade well" id="Cited">
+        <p>
+          Carsten Binnig , Robin Rehrmann , Franz Faerber , Rudolf Riewe, FunSQL: it is time to make SQL functional, Proceedings of the 2012 Joint EDBT/ICDT Workshops, March 30-30, 2012, Berlin, Germany<br><br>
+          Erik Brynjolfsson , Paul Hofmann , John Jordan, Cloud computing and electricity: beyond the utility model, Communications of the ACM, v.53 n.5, May 2010<br><br>
+          Ashish Agrawal , T. V. Prabhakar, Hospitality of cloud platforms, Proceedings of the 28th Annual ACM Symposium on Applied Computing, March 18-22, 2013, Coimbra, Portugal<br><br>
+          Luca Ferretti , Michele Colajanni , Mirco Marchetti, Supporting security and consistency for cloud database, Proceedings of the 4th international conference on Cyberspace Safety and Security, December 12-13, 2012, Melbourne, Australia<br><br>
+          Jean-Loup Richet, From Young Hackers to Crackers, International Journal of Technology and Human Interaction, v.9 n.3, p.53-62, July 2013<br><br>
+          Ali Sunyaev , Stephan Schneider, Cloud services certification, Communications of the ACM, v.56 n.2, February 2013<br><br>
+          Miguel Correia , Neeraj Mittal, Dependability issues in cloud computing: extended papers from the 1st international workshop on dependability issues in cloud computing -- DISCCO, ACM SIGOPS Operating Systems Review, v.47 n.2, July 2013<br><br>
+          Massimo Bartoletti , Tiziana Cimoli , Roberto Zunino, A theory of agreements and protection, Proceedings of the Second international conference on Principles of Security and Trust, March 16-24, 2013, Rome, Italy<br><br>
+          Ji-Yong Shin , Emin Gün Sirer , Hakim Weatherspoon , Darko Kirovski, On the feasibility of completely wireless datacenters, Proceedings of the eighth ACM/IEEE symposium on Architectures for networking and communications systems, October 29-30, 2012, Austin, Texas, USA<br><br>
+          Asato Yamanaka , Yukinobu Fukushima , Tutomu Murase , Tokumi Yokohira , Tatsuya Suda, Destination selection algorithm in a server migration service, Proceedings of the 7th International Conference on Future Internet Technologies, September 11-12, 2012, Seoul, Korea<br><br>
+        </p>
+      </div>
+      <div class="tab-pane fade well" id="Publication">
+        <p>
+          Title  Communications of the ACM CACM Homepage table of contents archive
+          Volume 53 Issue 4, April 2010<br><br>
+          Pages  50-58<br><br>
+          Publicaion Date 2010-04-01 (yyyy-mm-dd)<br><br>
+          Publisher ACM New York, NY, USA<br><br>
+          ISSN: 0001-0782 EISSN: 1557-7317 doi>10.1145/1721654.1721672<br><br>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="brief-comments" class="col-md-4">
+    <h3>Brief Conments</h3>
+    <ul class="list-unstyled">
+      <li>
+        <a href="#" class="">
+          Cyanny LIANG
+        </a>
+        <p class="">It's really good about cloud computing!</p>
+      </li>
+      <li>
+        <a href="#" class="">
+          Arron FENG
+        </a>
+        <p class="">It's really Bad paper! Dont know what it is sayins.</p>
+      </li>
+      <li>
+        <a href="#" class="">
+          Thomas ZHANG
+        </a>
+        <p class="">It's just OK. There's some other paper explains things better.</p>
+      </li>
+      <li>
+        <a href="#" class="">
+          Smone Else
+        </a>
+        <p class="">lalala, love this paper lalala~</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="comments">
+  <h3>Comments</h3>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+            Paper Comments #1
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+            Paper Comments #2
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse">
+        <div class="panel-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+            Paper Comments #3
+          </a>
+        </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse">
+        <div class="panel-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

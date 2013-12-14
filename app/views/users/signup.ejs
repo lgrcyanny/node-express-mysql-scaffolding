@@ -1,0 +1,30 @@
+<% layout('../layouts/default') -%>
+<div id="signup-section">
+  <form class="form-horizontal" method="post" action="/users">
+    <div class="form-group">
+      <label for="inputFullName" class="col-lg-2 control-label">Full name</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="inputFullName" name="fullname" placeholder="Full Name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+      <div class="col-lg-10">
+        <input type="email" rquired="required" class="form-control" id="inputEmail" name="email" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputUsername" class="col-lg-2 control-label">Username</label>
+      <div class="col-lg-10">
+        <input type="text" rquired="required" class="form-control" id="inputUsername" name="username" placeholder="Username">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+      <div class="col-lg-10">
+        <input type="password" required="required" class="form-control" id="inputPassword" name="password" placeholder="Password">
+        <button type="submit" class="btn btn-warning" style="margin-top: 10px">SIGN UP</button>
+      </div>
+    </div>
+  </form>
+</div>

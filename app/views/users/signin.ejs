@@ -1,0 +1,27 @@
+<% layout('../layouts/default') -%>
+<div id="signin-section">
+  <form class="form-horizontal" method="post" action="/users/session">
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+      <div class="col-lg-10">
+        <input type="email" required="required" class="form-control" id="inputEmail" name="email" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+      <div class="col-lg-10">
+        <input type="password" required="required" class="form-control" id="inputPassword" name="password" placeholder="Password">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Remember me
+          </label>
+        </div>
+        <% if (message) { %>
+          <p><%=message %></p>
+        <% } %>
+        <button type="submit" class="btn btn-success">Sign in</button>
+        <a class="" href="/signup" title="No account yet?">Sign up</a>
+      </div>
+    </div>
+  </form>
+</div>
