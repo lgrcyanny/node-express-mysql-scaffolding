@@ -41,6 +41,7 @@ exports.session = function (req, res) {
     delete req.session.returnTo;
     return;
   }
+  console.log(req.session.returnTo);
   res.redirect('/');
 }
 
@@ -50,7 +51,7 @@ exports.session = function (req, res) {
 
 exports.create = function (req, res) {
   var user = req.body;
-  usermodel.save(user, function (err, insertId) {
+  usermodel.save(user, function (err, result) {
     if (err) {
       console.log(err);
       return res.render('users/signup', {
@@ -58,7 +59,7 @@ exports.create = function (req, res) {
         title: 'Sign up'
       });
     }
-    user.id = insertId;
+    user.id = result.insertId;
     // manually login the user once successfully signed up
     req.login(user, function(err) {
       if (err) {
@@ -75,14 +76,10 @@ exports.create = function (req, res) {
 exports.showProfile = function (req, res) {
   var user = req.profile
   res.send(user);
-  // res.render('users/profile', {
-  //   title: user.name,
-  //   user: user
-  // });
 }
 
 exports.showtestuser = function (req, res) {
-  usermodel.findById(1, function (err, results) {
+  usermodel.find({username: 'admin'}, function (err, results) {
     res.send(results);
   });
 }
@@ -95,8 +92,9 @@ exports.list = function (req, res) {
  * Find user by id
  */
 exports.user = function (req, res, next, id) {
-  usermodel.findById(id, function (err, user) {
+  usermodel.findById(id, function (err, results) {
     if (err) return next(err);
+    var user = results[0];
     if (!user) return next(new Error('Failed to load User ' + id));
     req.profile = user;
     next();

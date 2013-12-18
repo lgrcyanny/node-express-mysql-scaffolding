@@ -1,32 +1,36 @@
-# PaperBook Overview
- PaperBook is a Literature Management System, which is shipped with convenient literature upload, search, comment and greate communication functions for a private research group.<br>
- First step, we built the system based on Node.js + Express + MySQL<BR>
- Second step, migrate big data to HBase, make use of Hadoop to build a cloud research platform.
+# Node Express MySQL Scaffolding Overview
+There are many node scaffoldings based on Mongoddb, but MySQL is rare. This is a simple scaffolding built on express and mysql.
 
-# Team Member
+# Author
 + [Cyanny Liang](http://www.cyanny.com)
-+ Thomas Zhang
-+ Aaron Feng
+
+# Features
+1. Register with fullname, email, passord, very simple
+2. Login with [passport-local](https://npmjs.org/package/passport-local) strategy
+3. Twitter Bootstrap Support
+Note: I just want keep the scaffolding clean, no more complex function, and keep it flexible.
 
 ## Install
 
-**NOTE:** You need to have node.js, mongodb installed
+**NOTE:** You need to have node.js, mysql installed <BR>
 1. Clone the project
 ```sh
-  $ git clone https://github.com/lgrcyanny/PaperBook
+  $ git clone https://github.com/lgrcyanny/node-express-mysql-scaffolding.git
   $ npm install
   $ cp config/config.disk.js config/config.js
 ```
-2. Install mysql[http://dev.mysql.com/downloads/]
+Please config your MySQL in the `config.js`;
 
-3. Start mysql service
+2. Install MySQL server[http://dev.mysql.com/downloads/]
+
+3. Start MySQL service
 
 4. Build the database
 ```sh
   $ mysql -u root -p
-  > create database paperbook
+  > create database scaffolding
   > quit
-  $ mysql -u root -pyourpassword paperbook < paperbook.sql
+  $ mysql -u root -pyourpassword scaffolding < scaffolding.sql
 ```
 5. Start Server
 ```sh
@@ -35,7 +39,8 @@
 4. Then visit [http://localhost:3000/](http://localhost:3000/)
 
 ## Related modules
-[node-express-mongoose-demo](https://github.com/madhums/node-express-mongoose-demo)
+Thanks [node-express-mongoose-demo](https://github.com/madhums/node-express-mongoose-demo), it's a great scaffolding, but it still took me 2 days to migrate the mongodb based scaffolding to MySQL
+
 
 ## Directory structure
 ```
@@ -48,21 +53,17 @@
   |__routes.js
   |__config.js
   |__passport.js (auth config)
-  |__imager.js (imager config)
   |__express.js (express.js configs)
   |__middlewares/ (custom middlewares)
 -public/
 ```
 
 ## Tests
+Tests are not shipped now, I will write tests later.
 
 ```sh
 $ npm test
 ```
-
-## Comments
-Originally, the project is built on mongodb, but our teacher said that we have to use mysql, which freaks us out.
-The migration costs me 3 days, just simple signin/signup function. Different database is like different OS. Why teacher user command us to do so ? He wants us to compare rational database and non-rational database(HBase). By the way, even though I hate the migration, I learned a lot.
 
 ## License
 (The MIT License)

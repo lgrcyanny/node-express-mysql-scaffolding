@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="true">
     <title><%=title ? title : pkg.name %></title>
     <meta name="description" content="<%=pkg.description %>" />
-    <meta name="author" content="XLMS Team" />
+    <meta name="author" content="Cyanny Liang" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
@@ -22,7 +22,7 @@
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
-              <a class="navbar-brand" href="/">PaperBook</a>
+              <a class="navbar-brand" href="/">Node Scaffolding</a>
             </div>
             <% if (req.originalUrl !== '/') {%>
             <form class="navbar-form navbar-left" role="search">
@@ -35,16 +35,16 @@
             <div class="navbar-right">
               <ul class="nav navbar-nav">
                 <li>
-                  <a href="/upload">Upload</a>
+                  <a href="#">Menu1</a>
                 </li>
                 <li>
-                  <a href="/myliterature">My Literature</a>
+                  <a href="#">Menu2</a>
                 </li>
                 <li>
-                  <a href="/statistics">Statistics</a>
+                  <a href="#">Menu3</a>
                 </li>
                 <li>
-                  <a href="/admin">Admin</a>
+                  <a href="#">Menu4</a>
                 </li>
                 <% if (req.isAuthenticated()) { %>
                 <li>
@@ -72,7 +72,7 @@
       </section>
       <hr>
       <footer>
-        <p> © PaperBook Literature Management System - PaperBook Development Team Support, 2013 </p>
+        <p> © 2013 Cyanny Liang | <a href="http://www.cyanny.com">cyanny's Live |  <a href="http://github.com/lgrcyanny">Cyanny' GitHub</a></p>
       </footer>
     </div>
     <script type="text/javascript" src="/lib/jquery/js/jquery-2.0.3.min.js"></script>

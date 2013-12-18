@@ -9,9 +9,8 @@ var async = require('async')
  */
 
 var users = require('../app/controllers/users');
-var search = require('../app/controllers/search');
 var auth = require('./middlewares/authorization');
-var literature = require('../app/controllers/literature');
+var index= require('../app/controllers/index');
 
 
 /**
@@ -37,14 +36,6 @@ module.exports = function (app, passport) {
   app.get('/showtestuser', users.showtestuser);
 
   // home route
-  app.get('/', search.index);
-
-  // search route
-  app.get('/search/results', search.showSearchResults);
-  app.get('/literature/1', literature.fetchById);
-
-  // Literature Route
-  app.post('/literature', literature.create);
-
+  app.get('/', index.index);
 
 }

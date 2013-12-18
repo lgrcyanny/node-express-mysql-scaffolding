@@ -8,11 +8,11 @@ module.exports = {
       host: 'localhost',
       user: 'root',
       password: 'root',
-      database: 'paperbook'
+      database: 'scaffolding'
     },
     root: rootPath,
     app: {
-      name: 'paperbook'
+      name: 'Node-Express-MySQL-Scaffolding'
     }
   },
   test: {
@@ -20,11 +20,11 @@ module.exports = {
       host: 'localhost',
       user: 'root',
       password: 'root',
-      database: 'paperbook'
+      database: 'scaffolding'
     },
     root: rootPath,
     app: {
-      name: 'PaperBook'
+      name: 'Node-Express-MySQL-Scaffolding'
     }
   },
   production: {
@@ -32,11 +32,11 @@ module.exports = {
       host: 'localhost',
       user: 'root',
       password: 'root',
-      database: 'paperbook'
+      database: 'scaffolding'
     },
     root: rootPath,
     app: {
-      name: 'PaperBook'
+      name: 'Node-Express-MySQL-Scaffolding'
     }
   }
 }

@@ -9,8 +9,8 @@ module.exports = function (passport, config) {
   });
 
   passport.deserializeUser(function(id, done) {
-    usermodel.findById(id, function (err, user) {
-      done(err, user);
+    usermodel.findById(id, function (err, results) {
+      done(err, results[0]);
     });
   });
 

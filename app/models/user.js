@@ -8,41 +8,26 @@ module.exports = {
   table: 'users',
 
   find: function (condition, cb) {
-    var connection = utils.getDBConnection();
-    utils.connectToDB(connection);
-    connection.query('SELECT * FROM ?? WHERE ?', [this.table, condition], function (err, res) {
-      if (err) cb(err);
-      cb(null, res);
-    });
-    utils.endDBConnection(connection);
+    var query = 'SELECT * FROM ?? WHERE ?';
+    var data = [this.table, condition];
+    utils.exec(query, data, cb);
   },
 
   findById: function (id, cb) {
+    var query = 'SELECT * FROM ?? WHERE id = ?';
+    var data = [this.table, id];
     var connection = utils.getDBConnection();
-    utils.connectToDB(connection);
-    connection.query('SELECT * FROM ?? WHERE id = ?', [this.table, id], function (err, res) {
-      if (err) cb(err);
-      cb(null, res[0]);
-    });
-    utils.endDBConnection(connection);
+    utils.exec(query, data, cb);
   },
 
   /**
    * Create new user record to database
    */
   save: function (user, cb) {
-    var connection = utils.getDBConnection();
-    utils.connectToDB(connection);
     user.salt = this.makeSalt();
     user.password = this.encryptPassword(user.password, user.salt);
-    var query = connection.query('INSERT INTO users SET ?', user, function (err, res) {
-      if (err) {
-        cb(err);
-      }
-      user.id = res.insertId;
-      cb(null, res.insertId);
-    });
-    utils.endDBConnection(connection);
+    var query = 'INSERT INTO users SET ?';
+    utils.exec(query, user, cb);
   },
 
   /**
