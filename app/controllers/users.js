@@ -11,7 +11,7 @@ var usermodel = require('../models/user.js');
 exports.showSignIn = function (req, res) {
   res.render('users/signin', {
     title: 'Sign In',
-    message: req.flash('errors')
+    message: req.flash('error')
   });
 }
 
@@ -20,7 +20,8 @@ exports.showSignIn = function (req, res) {
  */
 exports.showSignUp = function (req, res) {
   res.render('users/signup', {
-    title: 'Sign up'
+    title: 'Sign up',
+    error: ''
   });
 }
 
@@ -55,18 +56,20 @@ exports.create = function (req, res) {
     if (err) {
       console.log(err);
       return res.render('users/signup', {
-        errors: err,
+        error: 'Username or Email already exists.',
         title: 'Sign up'
       });
     }
-    user.id = result.insertId;
-    // manually login the user once successfully signed up
-    req.login(user, function(err) {
-      if (err) {
-        throw err;
-      }
-      return res.redirect('/')
-    });
+    if (result) {
+      user.id = result.insertId;
+      // manually login the user once successfully signed up
+      req.login(user, function(err) {
+        if (err) {
+          throw err;
+        }
+        return res.redirect('/')
+      });
+    }
   });
 }
 

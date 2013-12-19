@@ -16,12 +16,17 @@
             <input type="checkbox"> Remember me
           </label>
         </div>
-        <% if (message) { %>
-          <p><%=message %></p>
-        <% } %>
         <button type="submit" class="btn btn-success">Sign in</button>
         <a class="" href="/signup" title="No account yet?">Sign up</a>
       </div>
+    </div>
+    <div class="form-group">
+      <% if (message.length > 1) { %>
+        <div class="alert alert-danger alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <strong>Sorry! </strong> <%=message %>
+        </div>
+        <% } %>
     </div>
   </form>
 </div>

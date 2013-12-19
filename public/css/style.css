@@ -6,25 +6,7 @@ body {
   color: #999;
 }
 .main-body {
-  min-height: 650px;
-}
-.search-box {
-  margin-top: 250px;
-  width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.search-box form {
-  width: 100%;
-}
-.search-box form input {
-  width: 580px;
-  float: left;
-}
-.search-box form button {
-  width: 72px;
-  float: left;
-  margin-left: 10px;
+  min-height: 550px;
 }
 #signin-section,
 #signup-section {
@@ -37,7 +19,7 @@ body {
   width: 550px;
 }
 footer * {
-  width: 600px;
+  width: 370px;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
